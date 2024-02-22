@@ -4,11 +4,12 @@ counter_hour=0
 counter_minutes=0
 while [ $counter_hour -lt 13 ]
 do
-echo "Hour: " $counter_hour
-while [ $counter_minutes -lt 60 ]
-do
-echo $counter_minutes
-((counter_minutes++))
-done
-((counter_hour++)
+	echo "Hour: " $counter_hour
+	while [ $counter_minutes -lt 60 ]
+	do
+		echo $counter_minutes
+		((counter_minutes++))
+	done
+	counter_minutes=0
+	((counter_hour++))
 done
