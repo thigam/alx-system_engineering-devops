@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script prints "Best School" 10 times but prints hi after the ninth time
+counter=10
+while [ $counter -gt 0 ]
+do
+echo "Best School"
+if [ $counter -eq 2 ]
+then
+echo "Hi"
+fi
+((counter--))
+done

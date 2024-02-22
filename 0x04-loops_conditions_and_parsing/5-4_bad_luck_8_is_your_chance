@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script prints "Best School" 8 times, "bad luck" on the fourth iteration and "good luck" on the eigth
+counter=10
+while [ $counter -gt 0 ]
+do
+if [ $counter -eq 7 ]
+then
+echo "bad luck"
+elif [ $counter -eq 3 ]
+then
+echo "good luck"
+else
+echo "Best School"
+fi
+((counter--))
+done
