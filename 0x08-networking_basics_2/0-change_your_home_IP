@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Configures an Ubuntu server with localhost as 127.0.0.2 and facebook.com as 8.8.8.8
+ifconfig lo 127.0.0.2
+ifconfig facebook.com 8.8.8.8
 cp /etc/hosts ~/hosts.new
-sed 's/127.0.0.1/127.0.0.2/g' ~/hosts.new
+sed -i 's/127.0.0.1/127.0.0.2 localhost facebook.com/g' ~/hosts.new
+sed -i 's/157.240.229.35/8.8.8.8/g' /etc/hosts
 cp -f ~/hosts.new /etc/hosts
